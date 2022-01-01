@@ -3,12 +3,13 @@ import Head from 'next/head';
 import NavBar from 'components/NavBar';
 import styled from 'styled-components';
 import { GlobalStyle } from 'styles/global';
+import HeroSection from 'components/HeroSection';
 
 const Container = styled.div`
   margin: 0 1rem;
 
   @media (min-width: 500px) {
-    margin: 0 6rem;
+    margin: 0 3rem;
   }
 `;
 
@@ -24,7 +25,9 @@ const Home: NextPage = () => {
 
         <NavBar />
 
-        {/* <main>this is main</main> */}
+        <main>
+          <HeroSection />
+        </main>
       </Container>
 
       <GlobalStyle />
