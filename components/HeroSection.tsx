@@ -83,6 +83,7 @@ const Button = styled.button`
   font-size: 16px;
   padding: 14px 26px;
   font-weight: 500;
+  margin-bottom: 10px;
   border-radius: 32px;
   background-color: ${({ bgColor }: BtnColor) => bgColor};
   border: none;
