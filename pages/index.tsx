@@ -9,8 +9,23 @@ const Container = styled.div`
   margin: 0 1rem;
 
   @media (min-width: 500px) {
-    margin: 0 3rem;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+`;
+
+const VideoContainer = styled.div`
+  width: 100%;
+  border-radius: 20px;
+`;
+
+const Video = styled.video`
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 20px;
 `;
 
 const Home: NextPage = () => {
@@ -27,6 +42,12 @@ const Home: NextPage = () => {
 
         <main>
           <HeroSection />
+          <VideoContainer>
+            <Video autoPlay loop muted>
+              {/* <source src="one-does-not-simply.webm" type="video/webm" /> */}
+              <source src="/video/video1.mp4" type="video/mp4" />
+            </Video>
+          </VideoContainer>
         </main>
       </Container>
 

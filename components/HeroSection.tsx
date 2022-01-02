@@ -66,13 +66,13 @@ const Span = styled.span`
 const ButtonContainer = styled.section`
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
-  max-width: 100%;
+  /* flex-direction: column; */
+  width: 100%;
   align-items: flex-start;
   justify-items: center;
 
   @media (min-width: 500px) {
-    flex-direction: row;
+    /* flex-direction: row; */
     max-width: 100%;
   }
 `;
@@ -92,7 +92,7 @@ const Button = styled.button`
   /* height: 30px; */
   /* color: white; */
   /* margin-bottom: 8px; */
-  width: 180px;
+  width: 200px;
   box-shadow: rgb(12 20 66 / 2%) 0px 2px 4px, rgb(12 20 66 / 3%) 0px -1px 2px inset;
 
   @media (min-width: 500px) {
