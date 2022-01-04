@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -31,7 +31,7 @@ const Title = styled.div`
   }
 `;
 
-const Paragraph = styled.div`
+export const Paragraph = styled.div`
   font-size: 16px;
   color: #777d85;
   -webkit-font-smoothing: antialised;
