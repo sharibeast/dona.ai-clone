@@ -9,6 +9,7 @@ export const VideoContainer = styled.div`
 export const Video = styled.video`
   width: 100%;
   display: block;
+  /* border: none; */
   object-fit: contain;
   border-radius: 20px;
 `;
