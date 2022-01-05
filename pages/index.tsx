@@ -7,40 +7,18 @@ import HeroSection from 'components/HeroSection';
 import ShowCase from 'components/ShowCase';
 import TodoListShowCase from 'components/TodoListShowCase';
 import DonaTabs from 'components/DonaTabs';
+import Layout from 'components/Layout/Layout';
 
-const Container = styled.div`
-  margin: 0 1rem;
 
-  @media (min-width: 500px) {
-    margin: 0 auto;
-    max-width: 1140px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-`;
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Container>
-        <Head>
-          <title>Dona - Home</title>
-          <meta name="description" content="A more humane to-do list" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <NavBar />
-
-        <main>
-          <HeroSection />
-          <ShowCase />
-          <TodoListShowCase />
-          <DonaTabs/>
-        </main>
-      </Container>
-
-      <GlobalStyle />
-    </>
+    <Layout>
+      <HeroSection />
+      <ShowCase />
+      <TodoListShowCase />
+      <DonaTabs />
+    </Layout>
   );
 };
 
