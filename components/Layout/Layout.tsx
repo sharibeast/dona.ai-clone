@@ -28,9 +28,9 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="description" content="A more humane to-do list" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
 
       <Container>
+        <NavBar />
         <main>{children}</main>
         <Footer />
       </Container>

@@ -1,15 +1,9 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import NavBar from 'components/NavBar';
-import styled from 'styled-components';
-import { GlobalStyle } from 'styles/global';
 import HeroSection from 'components/HeroSection';
 import ShowCase from 'components/ShowCase';
 import TodoListShowCase from 'components/TodoListShowCase';
-import DonaTabs from 'components/DonaTabs';
 import Layout from 'components/Layout/Layout';
-
-
+import Input from 'components/Input/Input';
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +11,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <ShowCase />
       <TodoListShowCase />
-      <DonaTabs />
+      <Input />
     </Layout>
   );
 };
