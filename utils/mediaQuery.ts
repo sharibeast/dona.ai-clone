@@ -6,10 +6,10 @@ type MediaQuery = {
 };
 
 const sizes: MediaQuery = {
-  sm: '500px',
-  md: '993px',
-  lg: '1000px',
-  xl: '1280px',
+  sm: '480px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
 };
 
 export const media: MediaQuery = {

@@ -12,6 +12,7 @@ const GetEarlyAccess = styled.input`
   color: gray;
   padding: 20px 0px;
   font-family: inherit;
+  width: 100%;
 `;
 
 const Submit = styled.button`
