@@ -85,19 +85,22 @@ const Button = styled.button`
   font-weight: 500;
   margin-bottom: 10px;
   border-radius: 32px;
-  background-color: ${({ bgColor }: BtnColor) => bgColor};
   border: none;
   margin-right: 16px;
-  /* text-align: center; */
-  /* height: 30px; */
-  /* color: white; */
-  /* margin-bottom: 8px; */
   width: 200px;
+  background: linear-gradient(rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 100%),
+    rgb(0, 143, 253);
   box-shadow: rgb(12 20 66 / 2%) 0px 2px 4px, rgb(12 20 66 / 3%) 0px -1px 2px inset;
 
   @media (min-width: 500px) {
     width: 200px;
   }
+`;
+
+const IconButton = styled(Button)`
+  color: black;
+  background: linear-gradient(rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 100%),
+    rgb(236, 239, 242);
 `;
 export default function HeroSection() {
   return (
@@ -110,10 +113,10 @@ export default function HeroSection() {
         Dona is a back to basic to-do list focused on fast and delightful user experience
       </Description>
       <ButtonContainer>
-        <Button bgColor="#EDEFF2">
+        <IconButton>
           <svg
-            height="20"
-            width="24"
+            height="16"
+            width="16"
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -124,8 +127,8 @@ export default function HeroSection() {
             ></path>
           </svg>
           Watch videos
-        </Button>
-        <Button bgColor="rgb(0, 143, 253)">Earl Access</Button>
+        </IconButton>
+        <Button>Earl Access</Button>
       </ButtonContainer>
     </HeroSectionContainer>
   );

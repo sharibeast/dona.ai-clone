@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/mediaQuery';
-import { Container } from 'components/Layout/Layout';
 
 const FooterWrapper = styled.div`
   border-top: 1px solid rgb(236, 239, 242);
