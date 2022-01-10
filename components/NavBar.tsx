@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { BtnColor } from 'interface/color';
@@ -27,7 +28,9 @@ const NavContainer = styled.nav`
 export default function NavBar(): JSX.Element {
   return (
     <NavContainer>
+      <Link href='/about' passHref={true}>
       <Button bgColor="white">About</Button>
+      </Link>
       <Logo />
       <Button bgColor="#EAECEF">login</Button>
     </NavContainer>

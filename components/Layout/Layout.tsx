@@ -35,12 +35,6 @@ export const Container = styled.div`
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Head>
-        <title>Dona - Home</title>
-        <meta name="description" content="A more humane to-do list" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Container>
         <NavBar />
         <main>{children}</main>
