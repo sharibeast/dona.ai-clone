@@ -3,13 +3,15 @@ import Layout from 'components/Layout/Layout'
 import { media } from 'utils/mediaQuery'
 import Head from 'components/Head/Head'
 import styled from 'styled-components'
+import Team from 'components/Team'
 
 const AboutSummary = styled.div`
         margin-top:50px;
 `
-const Brief =styled.h1`
+const Brief = styled.h1`
 font-size:40px;
 line-height:1.1;
+// background:red;
 color:rgb(25,25,27);
 font-weight:700;
 
@@ -27,10 +29,11 @@ ${media.lg}{
 `
 const BriefSpan = styled.span`
     display: inline;
-    -webkit-text-fill-color: transparent;
+    // -webkit-text-fill-color: transparent;
     line-height: 1.1;
+    color:rgb(180, 197, 219);
     margin-bottom: -4px;
-    background: linear-gradient(to right, rgb(211, 215, 219) 50%, rgba(179, 207, 255, 0.7) 100%) text rgb(120, 128, 136);
+    // background: linear-gradient(to right, rgb(211, 215, 219) 50%, rgba(179, 207, 255, 0.7) 100%) text rgb(120, 128, 136);
 `
 
 const Details = styled.p`
@@ -58,17 +61,18 @@ const DetailSpan = styled.span`
 export default function about() {
     return (
         <Layout>
-            <Head title='About - Dona' description=''/>
+            <Head title='About - Dona' description='' />
             <AboutSummary>
                 <Brief>
                     <BriefSpan>We&apos;re building</BriefSpan> <br />
                     to-do list you&apos;ll enjoy using
                 </Brief>
-            <Details>
-               Our mission with Dona is to solve current problems with to-do list apps by a more humane design approach and a completely natural user experience.
-               <DetailSpan>We want to bring satisfaction to every day use of to-do lists and not feeling it like a chore anymore</DetailSpan>
-            </Details>
+                <Details>
+                    Our mission with Dona is to solve current problems with to-do list apps by a more humane design approach and a completely natural user experience.
+                    <DetailSpan>We want to bring satisfaction to every day use of to-do lists and not feeling it like a chore anymore</DetailSpan>
+                </Details>
             </AboutSummary>
+            <Team />
         </Layout>
     )
 }

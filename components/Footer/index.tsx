@@ -50,7 +50,7 @@ const A = styled.div`
   margin-right: 10px;
 `;
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -64,6 +64,8 @@ const IconWrapper = styled.div`
 
   &:hover {
     background-color: rgb(233, 236, 239);
+
+  box-shadow: rgb(0 0 0 / 2%) 0px 2px 4px, rgb(0 0 0 / 3%) 0px -1px 2px inset;
   }
 `;
 
