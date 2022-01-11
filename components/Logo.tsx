@@ -1,10 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SvgLogo = styled.svg`
+cursor:pointer;
+`
 
 export default function Logo() {
   return (
-    <svg
+    <SvgLogo
       height="28px"
-      //   fill="#468EFF"
       width="95.2px"
       viewBox="0 0 102 30"
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +20,6 @@ export default function Logo() {
         clipRule="evenodd"
         d="M17.7551 3.06122H12.2449C7.1729 3.06122 3.06122 7.1729 3.06122 12.2449V17.7551C3.06122 22.8271 7.1729 26.9388 12.2449 26.9388H17.7551C22.8271 26.9388 26.9388 22.8271 26.9388 17.7551V12.2449C26.9388 7.1729 22.8271 3.06122 17.7551 3.06122ZM12.2449 0C5.48223 0 0 5.48223 0 12.2449V17.7551C0 24.5178 5.48223 30 12.2449 30H17.7551C24.5178 30 30 24.5178 30 17.7551V12.2449C30 5.48223 24.5178 0 17.7551 0H12.2449Z"
       ></path>
-    </svg>
+    </SvgLogo>
   );
 }

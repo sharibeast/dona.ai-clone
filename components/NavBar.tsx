@@ -29,9 +29,11 @@ export default function NavBar(): JSX.Element {
   return (
     <NavContainer>
       <Link href='/about' passHref={true}>
-      <Button bgColor="white">About</Button>
+        <Button bgColor="white">About</Button>
       </Link>
-      <Logo />
+      <Link href='/' passHref={true}>
+        <Logo />
+      </Link>
       <Button bgColor="#EAECEF">login</Button>
     </NavContainer>
   );
