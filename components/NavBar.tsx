@@ -29,12 +29,20 @@ export default function NavBar(): JSX.Element {
   return (
     <NavContainer>
       <Link href='/about' passHref={true}>
-        <Button bgColor="white">About</Button>
+        <a >
+          <Button bgColor="white">About</Button>
+        </a>
       </Link>
       <Link href='/' passHref={true}>
-        <Logo />
+        <a>
+          <Logo />
+        </a>
       </Link>
-      <Button bgColor="#EAECEF">login</Button>
+      <Link href='/beta/login' passHref={true}>
+        <a>
+          <Button bgColor="#EAECEF">login</Button>
+        </a>
+      </Link>
     </NavContainer>
   );
 }
