@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Team from 'components/Team'
 
 const AboutSummary = styled.div`
-        margin-top:50px;
+        margin-top:120px;
 `
 const Brief = styled.h1`
 font-size:40px;
@@ -21,10 +21,11 @@ ${media.sm}{
 }
 ${media.md}{
     font-size:56px;
+    font-size:64px;
 }
 ${media.lg}{
     max-width:65%;
-    font-size:64px;
+    font-size:84px;
 }
 `
 const BriefSpan = styled.span`
@@ -48,6 +49,9 @@ ${media.sm}{
 
 ${media.md}{
     max-width:60%;
+}
+${media.lg}{
+    font-size:24px;
 }
 
 `
