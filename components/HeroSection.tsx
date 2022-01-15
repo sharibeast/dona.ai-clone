@@ -38,29 +38,11 @@ const Description = styled.p`
   }
 `;
 const Span = styled.span`
-  color: #d3d7db;
-  /* color: linear-gradient(to right, rgb(211, 215, 219) 50%, rgba(179, 207, 255, 0.7) 100%); */
-  display: inline;
-  /* -webkit-text-fill-color: transparent; */
-  line-height: 1.1;
-  /* margin-bottom: -4px; */
-  /* background: linear-gradient(to right, rgb(211, 215, 219) 50%, rgba(179, 207, 255, 0.7) 100%) text
-    rgb(120, 128, 136); */
-  /* background-image: linear-gradient(
-    to right,
-    rgb(211, 215, 219) 50%,
-    rgba(179, 207, 255, 0.7) 100% */
-  /* ); */
-  /* font-size: 40px; */
-  /* background-position-x: initial; */
-  /* background-position-y: initial; */
-  /* background-size: initial; */
-  /* background-repeat-x: initial; */
-  /* background-repeat-y: initial; */
-  /* background-attachment: initial; */
-  /* background-origin: initial; */
-  background-clip: text;
-  /* background-color: rgb(120, 128, 136); */
+  // color: #d3d7db;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#D2D7DB, #A7BDDD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const ButtonContainer = styled.section`
