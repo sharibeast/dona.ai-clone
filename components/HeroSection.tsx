@@ -38,7 +38,6 @@ const Description = styled.p`
   }
 `;
 const Span = styled.span`
-  // color: #d3d7db;
   font-size: 72px;
   background: -webkit-linear-gradient(#D2D7DB, #A7BDDD);
   -webkit-background-clip: text;
