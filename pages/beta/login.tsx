@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'components/Head/Head'
 import Link from 'next/link'
 import styled from 'styled-components'
@@ -36,23 +36,25 @@ margin-bottom:24px;
 color:#616870;
 `
 
+const Error = styled(Small)`
+color:#EE7474;
+`
+
 const Input = styled.input`
 border-radius:15px;
 padding:16px 16px;
 font-size:14px;
 font-weight:400;
 border-width:1px;
-// outline-color:transparent;
 outline-width:3px;
 max-width:400px;
 width:100%;
 margin-top:10px;
  box-shadow: inset 0 0 0 9999px var(--overlay,transparent),inset 0 0 0 var(--border-width,1px) var(--border-color,var(--background)),0 0 0 var(--outline-width,0) var(--outline-color,var(--c-grey));
 
-
  &:active{
      border-width:1px;
-     outline-color:black;
+     border-color:#616870;
  }
 `
 
@@ -79,7 +81,45 @@ max-width:400px;
 
 `
 
+interface FormState {
+    email?: string;
+    password?: string;
+}
 export default function Login(): JSX.Element {
+    const [state, setState] = useState<FormState>({ email: '', password: '' })
+    const [isSubmit, setIsSubmit] = useState<boolean>(false);
+    const [errors, setErrors] = useState<FormState>({})
+
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setState({ ...state, [name]: value })
+        console.log('hey babe this is our state ', state)
+    }
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setErrors(validate(state))
+        setIsSubmit(true);
+    }
+
+    const validate = (values: FormState) => {
+        const erorrObject: FormState = {};
+        if (!values.email) {
+            erorrObject.email = 'The email field is required'
+        }
+        if (!values.password) {
+            erorrObject.password = 'The password field is required'
+        }
+        return erorrObject;
+    }
+
+
+    useEffect(() => {
+        console.log('here is your errors', errors);
+    })
+
+
     return (
 
         <Container>
@@ -94,18 +134,21 @@ export default function Login(): JSX.Element {
                 <FormHeader>Log in</FormHeader>
                 <Small>Sign in if you already have account</Small>
 
-                <form action="/">
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <Input type="email" placeholder='Email' />
-                        <div>The email field is required</div>
+                        <Input type="email" onChange={handleChange} value={state.email} name='email' placeholder='Email' />
+                        <Error>
+                            {errors.email}
+                        </Error>
                     </div>
                     <div>
-                        <Input type="password" placeholder='Password' />
-                        <div>The passoword field is required</div>
+                        <Input type="password" onChange={handleChange} value={state.password} name='password' placeholder='Password' />
+                        <Error>{errors.password}</Error>
                     </div>
                     <Button type='submit'>Sign in</Button>
                 </form>
             </FormWrapper>
+
         </Container>
 
 
